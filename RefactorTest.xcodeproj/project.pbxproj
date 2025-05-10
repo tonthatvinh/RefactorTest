@@ -28,6 +28,8 @@
 		CD66F34D2DCF57D20046336D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66F34C2DCF57D20046336D /* Configuration.swift */; };
 		CD66F34F2DCF57F80046336D /* W3WService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66F34E2DCF57F80046336D /* W3WService.swift */; };
 		CD66F3522DCF58F10046336D /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CD66F3512DCF58F10046336D /* Swinject */; };
+		CD93B5892DCF5F8A006002F1 /* ApplicationServiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93B5882DCF5F8A006002F1 /* ApplicationServiceBuilder.swift */; };
+		CD93B58C2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93B58B2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift */; };
 		DD2181BEF943A7559AE5035B /* AntipodesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2EE948D95E6E0533E7279E /* AntipodesInteractorTests.swift */; };
 		F0FF970BC9994FA35D3EF833 /* AntipodesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57952A49B31CD487DA00BA /* AntipodesBuilder.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,8 @@
 		CD66F3472DCF57090046336D /* RefactorTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactorTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CD66F34C2DCF57D20046336D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		CD66F34E2DCF57F80046336D /* W3WService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = W3WService.swift; sourceTree = "<group>"; };
+		CD93B5882DCF5F8A006002F1 /* ApplicationServiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationServiceBuilder.swift; sourceTree = "<group>"; };
+		CD93B58B2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extension.swift"; sourceTree = "<group>"; };
 		D080396B6073402443724367 /* AntipodesViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = AntipodesViewController.xib; sourceTree = "<group>"; };
 		DBDFCAC3B5C9735D1977B406 /* AntipodesBuilderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AntipodesBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +217,8 @@
 		CD66F33C2DCF57040046336D /* RefactorTest */ = {
 			isa = PBXGroup;
 			children = (
+				CD93B58A2DCF63D0006002F1 /* Helper */,
+				CD93B5872DCF5F84006002F1 /* Configuration */,
 				CD66F34B2DCF57C40046336D /* Networking */,
 				CD66F3352DCF57040046336D /* AppDelegate.swift */,
 				CD66F3362DCF57040046336D /* Assets.xcassets */,
@@ -246,7 +252,6 @@
 		CD66F34B2DCF57C40046336D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CD66F34C2DCF57D20046336D /* Configuration.swift */,
 				CD66F34E2DCF57F80046336D /* W3WService.swift */,
 			);
 			path = Networking;
@@ -257,6 +262,23 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD93B5872DCF5F84006002F1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CD66F34C2DCF57D20046336D /* Configuration.swift */,
+				CD93B5882DCF5F8A006002F1 /* ApplicationServiceBuilder.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		CD93B58A2DCF63D0006002F1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CD93B58B2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		D5D14E34E81DFF76E3B46902 /* View */ = {
@@ -431,6 +453,8 @@
 				CD66F33F2DCF57040046336D /* ViewController.swift in Sources */,
 				CD66F34D2DCF57D20046336D /* Configuration.swift in Sources */,
 				A3801F76C43E566C3D6827AE /* AntipodesViewController.swift in Sources */,
+				CD93B58C2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift in Sources */,
+				CD93B5892DCF5F8A006002F1 /* ApplicationServiceBuilder.swift in Sources */,
 				B5F4722712D537527CB412C0 /* AntipodesPresenter.swift in Sources */,
 				3036A63EF70E82AD1E825DC0 /* AntipodesInteractor.swift in Sources */,
 				CD66F34F2DCF57F80046336D /* W3WService.swift in Sources */,

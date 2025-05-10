@@ -15,12 +15,12 @@ protocol AntipodesBuilder {
 
 class AntipodesDefaultBuilder: AntipodesBuilder {
   
-  let container = Container()
+    let container = Container(parent: ApplicationServiceBuilder.defaultContainer)
   
   func buildAntipodesViewController() -> AntipodesViewController! {
     
-    container.register(AntipodesInteractor.self) { _ in
-      AntipodesInteractorImp() //Add service
+    container.register(AntipodesInteractor.self) { r in
+        AntipodesInteractorImp(w3wService: r.resolve(W3WService.self)!) //Add service
     }
     
     container.register(AntipodesViewController.self) { _ in

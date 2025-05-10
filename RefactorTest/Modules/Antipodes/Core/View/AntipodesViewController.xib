@@ -23,6 +23,9 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVm-9n-muA">
                     <rect key="frame" x="0.0" y="118" width="393" height="666"/>
                     <standardMapConfiguration key="preferredConfiguration"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="W9N-cz-Er5"/>
+                    </connections>
                 </mapView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="0Q3-r9-nsV"/>

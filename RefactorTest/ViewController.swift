@@ -40,23 +40,21 @@ class ViewController: UIViewController, MKMapViewDelegate {
   
   func showCoordinate(coordinate: CLLocationCoordinate2D) {
     api.convertTo3wa(coordinates: coordinate, language: W3WBaseLanguage(code: "en")) { square, error in
-      let annotation = ColorPointAnnotation()
-      annotation.coordinate = coordinate
-      annotation.color = .red
-      annotation.title = square?.words ?? "\(coordinate.latitude), \(coordinate.longitude)"
+      let annotation = ColorPointAnnotation(title: square?.words ?? "\(coordinate.latitude), \(coordinate.longitude)",
+                                            coordinate: coordinate,
+                                            color: .red)
       DispatchQueue.main.async {
         (self.view as? MKMapView)?.addAnnotation(annotation)
         self.label.text = square?.words ?? "\(coordinate.latitude), \(coordinate.longitude)"
       }
     }
     
-    let antipole = antipole(coordinate: coordinate)
-    api.convertTo3wa(coordinates: antipole, language: W3WBaseLanguage(code: "en")) { square, error in
+      let antipole = coordinate.antipole()
+      api.convertTo3wa(coordinates: antipole, language: W3WBaseLanguage(code: "en")) { square, error in
       if let coordinate = square?.coordinates {
-        let annotation2 = ColorPointAnnotation()
-        annotation2.coordinate = coordinate
-        annotation2.color = .blue
-        annotation2.title = square?.words ?? "\(coordinate.latitude), \(coordinate.longitude)"
+          let annotation2 = ColorPointAnnotation(title: square?.words ?? "\(coordinate.latitude), \(coordinate.longitude)",
+                                                 coordinate: coordinate,
+                                                 color: .blue)
         DispatchQueue.main.async {
           (self.view as? MKMapView)?.addAnnotation(annotation2)
           self.label2.text = square?.words ?? "\(coordinate.latitude), \(coordinate.longitude)"
@@ -76,16 +74,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
       }
     }
   }
-
-  
-  func antipole(coordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
-    var longitude = coordinate.longitude + 180.0
-    if longitude > 180.0 {
-      longitude = longitude - 360.0
-    }
-    return CLLocationCoordinate2D(latitude: -coordinate.latitude, longitude: longitude)
-  }
-  
   
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     guard let colorPointAnnotation = annotation as? ColorPointAnnotation else {
@@ -104,9 +92,4 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     return pinView
   }
-}
-
-
-class ColorPointAnnotation: MKPointAnnotation {
-  var color: UIColor?
 }
