@@ -1,0 +1,53 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+import Swinject
+
+protocol {{ module_info.name }}Builder {
+  func build{{ module_info.name }}ViewController() -> {{ module_info.name }}ViewController!
+}
+
+class {{ module_info.name }}DefaultBuilder: {{ module_info.name }}Builder {
+  
+  let container = Container()
+  
+  func build{{ module_info.name }}ViewController() -> {{ module_info.name }}ViewController! {
+    
+    container.register({{ module_info.name }}Interactor.self) { _ in
+      {{ module_info.name }}InteractorImp() //Add service
+    }
+    
+    container.register({{ module_info.name }}ViewController.self) { _ in
+      
+      {{ module_info.name }}ViewController(nibName: String(describing:{{ module_info.name }}ViewController.self), bundle: Bundle.main)
+      
+    }.initCompleted { r, h in
+      
+      h.presenter = r.resolve({{ module_info.name }}Presenter.self)
+    }
+    
+    container.register({{ module_info.name }}Router.self) { c in
+      let router = {{ module_info.name }}RouterImp()
+      router.viewController = c.resolve({{ module_info.name }}ViewController.self)!
+      return router
+    }
+    
+    container.register({{ module_info.name }}Presenter.self) { c in
+      {{ module_info.name }}PresenterImp(view: c.resolve({{ module_info.name }}ViewController.self)!,
+        interactor: c.resolve({{ module_info.name }}Interactor.self)!,
+        router: c.resolve({{ module_info.name }}Router.self)!)
+    }
+    
+    return container.resolve({{ module_info.name }}ViewController.self)!
+  }
+  
+  deinit {
+    container.removeAll()
+  }
+}

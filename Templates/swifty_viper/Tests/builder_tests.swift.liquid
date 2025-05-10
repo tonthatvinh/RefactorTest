@@ -1,0 +1,32 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import XCTest
+@testable import {{ module_info.project_targets[0] }}
+
+class {{ module_info.name }}ModuleBuilderTests: XCTestCase {
+  
+  override func setUp() {
+    super.setUp()
+    // Put setup code here.
+    // This method is called before the invocation of each test method in the class.
+  }
+  
+  override func tearDown() {
+    // Put teardown code here.
+    // This method is called after the invocation of each test method in the class.
+    super.tearDown()
+  }
+  
+  func testConfigureModuleForViewController() {
+    let builder = {{ module_info.name }}DefaultBuilder()
+    let viewController = builder.build{{ module_info.name }}ViewController()
+    
+    XCTAssertNotNil(viewController, "{{ module_info.name }}ViewController is nil after configuration")
+  }
+}
