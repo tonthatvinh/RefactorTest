@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import W3WSwiftApi
+import CoreLocation
 @testable import RefactorTest
 
 class AntipodesPresenterTest: XCTestCase {
@@ -23,7 +25,11 @@ class AntipodesPresenterTest: XCTestCase {
     super.tearDown()
   }
 
-  class MockInteractor: AntipodesInteractor {
+    class MockInteractor: AntipodesInteractor {
+        func convertTo3wa(coordinate: CLLocationCoordinate2D, completion: @escaping W3WSwiftCore.W3WSquareResponse) {
+            
+        }
+        
 
   }
 
@@ -31,7 +37,20 @@ class AntipodesPresenterTest: XCTestCase {
 
   }
 
-  class MockViewController: AntipodesView {
+    class MockViewController: AntipodesView {
+        func showAnnotation(annotation: RefactorTest.ColorPointAnnotation) {
+            
+        }
+        
+        func showAntipodeAnnotation(annotation: RefactorTest.ColorPointAnnotation) {
+            
+        }
+        
+        func centerMapAt(_ coordinate: CLLocationCoordinate2D) {
+            
+        }
+        
 
   }
 }
+

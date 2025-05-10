@@ -18,12 +18,12 @@ class ConfigurationManager: Configuration {
         case MainDictionary = "W3W"
         case ApiKey
     }
-
-    init(_ bundle: Bundle? = Bundle.main) {
-        if let path = bundle?.path(forResource: "Info", ofType: "plist") {
-            parsedPlist = NSDictionary(contentsOfFile: path)?
-                .object(forKey: PlistKey.MainDictionary.rawValue) as? NSDictionary
-        }
+    
+    init(_ plistName: String? = "Info", bundle: Bundle? = Bundle.main) {
+      if let path = bundle?.path(forResource: plistName, ofType: "plist") {
+        parsedPlist = NSDictionary(contentsOfFile: path)?
+          .object(forKey: PlistKey.MainDictionary.rawValue) as? NSDictionary
+      }
     }
 
     func getW3WApiKey() -> String {

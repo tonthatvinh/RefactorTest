@@ -30,6 +30,7 @@
 		CD66F3522DCF58F10046336D /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CD66F3512DCF58F10046336D /* Swinject */; };
 		CD93B5892DCF5F8A006002F1 /* ApplicationServiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93B5882DCF5F8A006002F1 /* ApplicationServiceBuilder.swift */; };
 		CD93B58C2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93B58B2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift */; };
+		CD93B5A52DCF73C9006002F1 /* ConfigurationManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93B5A42DCF73C9006002F1 /* ConfigurationManagerTest.swift */; };
 		DD2181BEF943A7559AE5035B /* AntipodesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2EE948D95E6E0533E7279E /* AntipodesInteractorTests.swift */; };
 		F0FF970BC9994FA35D3EF833 /* AntipodesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57952A49B31CD487DA00BA /* AntipodesBuilder.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		CD66F34E2DCF57F80046336D /* W3WService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = W3WService.swift; sourceTree = "<group>"; };
 		CD93B5882DCF5F8A006002F1 /* ApplicationServiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationServiceBuilder.swift; sourceTree = "<group>"; };
 		CD93B58B2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extension.swift"; sourceTree = "<group>"; };
+		CD93B5A42DCF73C9006002F1 /* ConfigurationManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManagerTest.swift; sourceTree = "<group>"; };
 		D080396B6073402443724367 /* AntipodesViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = AntipodesViewController.xib; sourceTree = "<group>"; };
 		DBDFCAC3B5C9735D1977B406 /* AntipodesBuilderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AntipodesBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +236,7 @@
 		CD66F3442DCF57060046336D /* RefactorTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				CD93B5A32DCF73B1006002F1 /* Configuration */,
 				CD66F3432DCF57060046336D /* RefactorTestTests.swift */,
 				B1EEC1A68FC8D0EEDDDA1181 /* Modules */,
 			);
@@ -279,6 +282,14 @@
 				CD93B58B2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		CD93B5A32DCF73B1006002F1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CD93B5A42DCF73C9006002F1 /* ConfigurationManagerTest.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		D5D14E34E81DFF76E3B46902 /* View */ = {
@@ -471,6 +482,7 @@
 				BA49EA92ADC3F29873261F52 /* AntipodesBuilderTests.swift in Sources */,
 				0CF4B615B67374370DF4DBEF /* AntipodesViewTests.swift in Sources */,
 				DD2181BEF943A7559AE5035B /* AntipodesInteractorTests.swift in Sources */,
+				CD93B5A52DCF73C9006002F1 /* ConfigurationManagerTest.swift in Sources */,
 				5340E8DC2EABA698DA480C24 /* AntipodesPresenterTests.swift in Sources */,
 				C151BBA22D74C7005E18543A /* AntipodesRouterTests.swift in Sources */,
 			);
