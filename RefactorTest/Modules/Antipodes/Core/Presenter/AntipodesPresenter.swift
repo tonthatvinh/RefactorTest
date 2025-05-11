@@ -45,8 +45,6 @@ class AntipodesPresenterImp: AntipodesPresenter {
                                                   color: .red)
             view.showAnnotation(annotation: annotation) 
         }
-        
-        print(coordinate, coordinate.antipole())
         showAntipole(coordinate: coordinate.antipole())
     }
     

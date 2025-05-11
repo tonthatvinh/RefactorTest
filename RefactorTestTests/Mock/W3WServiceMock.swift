@@ -20,7 +20,6 @@ class W3WServiceMock: W3WService {
             let square = W3WServiceMock.parseJSONObject(JSON(response))
             completion(square, nil)
         } else {
-//            let response = Bundle(for: type(of: self)).readJSONFromFile("w3w-square-error")!
             let error: W3WError = .dataError
             completion(nil, error)
         }
