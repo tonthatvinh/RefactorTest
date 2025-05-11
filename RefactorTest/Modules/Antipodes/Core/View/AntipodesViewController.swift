@@ -17,30 +17,21 @@ protocol AntipodesView: AnyObject {
 
 class AntipodesViewController: UIViewController, AntipodesView {
     @IBOutlet weak var mkMapView: MKMapView!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label2: UILabel!
     
     var presenter: AntipodesPresenter!
-    lazy var label = UILabel(frame: CGRect(x: 64.0, y: 64.0, width: view.frame.width - 128.0, height: 32.0))
-    lazy var label2 = UILabel(frame: CGRect(x: 64.0, y: 64.0, width: view.frame.width - 128.0, height: 32.0))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "Select a square"
-        label.textAlignment = .center
-        label.layer.cornerRadius = 8.0
-        label.font = .boldSystemFont(ofSize: 24.0)
-        label.backgroundColor = .white
-        label.textColor = .red
-        label.frame = CGRect(x: 64.0, y: 64.0, width: 300.0, height: 32.0)
-        view.addSubview(label)
-        label2.textAlignment = .center
-        label2.layer.cornerRadius = 8.0
-        label2.font = .boldSystemFont(ofSize: 24.0)
-        label2.backgroundColor = .white
-        label2.textColor = .blue
-        label2.frame = CGRect(x: 64.0, y: 100.0, width: 300.0, height: 32.0)
-        view.addSubview(label2)
+        setupUI()
     }
     
+    private func setupUI() {
+        label.text = "Select a square"
+        label.layer.cornerRadius = 8.0
+        label2.layer.cornerRadius = 8.0
+    }
     
     func showAnnotation(annotation: ColorPointAnnotation) {
         DispatchQueue.main.async {

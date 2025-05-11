@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AntipodesViewController" customModule="RefactorTest" customModuleProvider="target">
             <connections>
+                <outlet property="label" destination="Q9b-7e-xOV" id="sZE-er-peV"/>
+                <outlet property="label2" destination="2Q3-oC-ywS" id="Kxp-JJ-6ub"/>
                 <outlet property="mkMapView" destination="yVm-9n-muA" id="bmF-kA-1yH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,22 +23,55 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVm-9n-muA">
-                    <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <standardMapConfiguration key="preferredConfiguration"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="W9N-cz-Er5"/>
                     </connections>
                 </mapView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9b-7e-xOV">
+                    <rect key="frame" x="32" y="64" width="329" height="32"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="qeM-0b-qJD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q3-oC-ywS">
+                    <rect key="frame" x="32" y="100" width="329" height="32"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="AjM-Ce-rwa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" systemColor="systemBlueColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="0Q3-r9-nsV"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="yVm-9n-muA" firstAttribute="leading" secondItem="0Q3-r9-nsV" secondAttribute="leading" id="47I-XU-hFg"/>
-                <constraint firstItem="0Q3-r9-nsV" firstAttribute="bottom" secondItem="yVm-9n-muA" secondAttribute="bottom" id="5oW-ez-FJL"/>
-                <constraint firstItem="0Q3-r9-nsV" firstAttribute="trailing" secondItem="yVm-9n-muA" secondAttribute="trailing" id="7zR-aL-b5K"/>
-                <constraint firstItem="yVm-9n-muA" firstAttribute="top" secondItem="0Q3-r9-nsV" secondAttribute="top" id="gkh-vH-knA"/>
+                <constraint firstItem="yVm-9n-muA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="47I-XU-hFg"/>
+                <constraint firstItem="2Q3-oC-ywS" firstAttribute="width" secondItem="Q9b-7e-xOV" secondAttribute="width" id="4ze-fi-8GZ"/>
+                <constraint firstAttribute="bottom" secondItem="yVm-9n-muA" secondAttribute="bottom" id="5oW-ez-FJL"/>
+                <constraint firstAttribute="trailing" secondItem="yVm-9n-muA" secondAttribute="trailing" id="7zR-aL-b5K"/>
+                <constraint firstItem="Q9b-7e-xOV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="En1-8d-muJ"/>
+                <constraint firstItem="Q9b-7e-xOV" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-64" id="Uqb-5B-sgL"/>
+                <constraint firstItem="2Q3-oC-ywS" firstAttribute="centerX" secondItem="Q9b-7e-xOV" secondAttribute="centerX" id="cyk-of-PTP"/>
+                <constraint firstItem="Q9b-7e-xOV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="d2s-9t-WUn"/>
+                <constraint firstItem="yVm-9n-muA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gkh-vH-knA"/>
+                <constraint firstItem="2Q3-oC-ywS" firstAttribute="top" secondItem="Q9b-7e-xOV" secondAttribute="bottom" constant="4" id="h33-LJ-dXT"/>
             </constraints>
             <point key="canvasLocation" x="-62" y="-17"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
