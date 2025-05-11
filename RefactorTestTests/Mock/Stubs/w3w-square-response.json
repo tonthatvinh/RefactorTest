@@ -1,0 +1,21 @@
+{
+  "country": "VN",
+  "square": {
+    "southwest": {
+      "lng": 108.34927,
+      "lat": 12.99151
+    },
+    "northeast": {
+      "lng": 108.349297,
+      "lat": 12.991537
+    }
+  },
+  "nearestPlace": "Krông Năng, Đắk Lắk",
+  "coordinates": {
+    "lng": 108.349283,
+    "lat": 12.991524
+  },
+  "words": "airliner.hissy.comforts",
+  "language": "en",
+  "map": "https://w3w.co/airliner.hissy.comforts"
+}

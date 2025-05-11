@@ -17,9 +17,9 @@
 		B5F4722712D537527CB412C0 /* AntipodesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D051D8A5A7BF56C0AC21C6C /* AntipodesPresenter.swift */; };
 		BA49EA92ADC3F29873261F52 /* AntipodesBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDFCAC3B5C9735D1977B406 /* AntipodesBuilderTests.swift */; };
 		C151BBA22D74C7005E18543A /* AntipodesRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B178CDB3A64A8F284DC74E /* AntipodesRouterTests.swift */; };
+		CD57FF272DD0502900E37313 /* InfoTestCase1.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD57FF262DD0502900E37313 /* InfoTestCase1.plist */; };
 		CD66F33D2DCF57040046336D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66F3352DCF57040046336D /* AppDelegate.swift */; };
 		CD66F33E2DCF57040046336D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66F33A2DCF57040046336D /* SceneDelegate.swift */; };
-		CD66F33F2DCF57040046336D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66F33B2DCF57040046336D /* ViewController.swift */; };
 		CD66F3402DCF57040046336D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD66F3362DCF57040046336D /* Assets.xcassets */; };
 		CD66F3422DCF57040046336D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD66F3392DCF57040046336D /* LaunchScreen.storyboard */; };
 		CD66F3452DCF57060046336D /* RefactorTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66F3432DCF57060046336D /* RefactorTestTests.swift */; };
@@ -28,9 +28,16 @@
 		CD66F34D2DCF57D20046336D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66F34C2DCF57D20046336D /* Configuration.swift */; };
 		CD66F34F2DCF57F80046336D /* W3WService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66F34E2DCF57F80046336D /* W3WService.swift */; };
 		CD66F3522DCF58F10046336D /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CD66F3512DCF58F10046336D /* Swinject */; };
+		CD7769272DD0539000DA5B18 /* BundleExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7769262DD0539000DA5B18 /* BundleExtensionTest.swift */; };
+		CD7769292DD053E100DA5B18 /* legacy-error.json in Resources */ = {isa = PBXBuildFile; fileRef = CD7769282DD053E100DA5B18 /* legacy-error.json */; };
 		CD93B5892DCF5F8A006002F1 /* ApplicationServiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93B5882DCF5F8A006002F1 /* ApplicationServiceBuilder.swift */; };
 		CD93B58C2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93B58B2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift */; };
 		CD93B5A52DCF73C9006002F1 /* ConfigurationManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93B5A42DCF73C9006002F1 /* ConfigurationManagerTest.swift */; };
+		CD93B5AB2DCF79CD006002F1 /* W3WServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93B5AA2DCF79CD006002F1 /* W3WServiceMock.swift */; };
+		CD93B5AE2DCF7CCB006002F1 /* w3w-square-response.json in Resources */ = {isa = PBXBuildFile; fileRef = CD93B5AD2DCF7CCB006002F1 /* w3w-square-response.json */; };
+		CD93B5B12DCF7F92006002F1 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CD93B5B02DCF7F92006002F1 /* SwiftyJSON */; };
+		CD93B5B32DCF8012006002F1 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93B5B22DCF8012006002F1 /* Bundle.swift */; };
+		CD93B5BB2DCFB3ED006002F1 /* w3w-square-response-no-words.json in Resources */ = {isa = PBXBuildFile; fileRef = CD93B5BA2DCFB3ED006002F1 /* w3w-square-response-no-words.json */; };
 		DD2181BEF943A7559AE5035B /* AntipodesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2EE948D95E6E0533E7279E /* AntipodesInteractorTests.swift */; };
 		F0FF970BC9994FA35D3EF833 /* AntipodesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A57952A49B31CD487DA00BA /* AntipodesBuilder.swift */; };
 /* End PBXBuildFile section */
@@ -65,20 +72,26 @@
 		8D051D8A5A7BF56C0AC21C6C /* AntipodesPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AntipodesPresenter.swift; sourceTree = "<group>"; };
 		BC2EE948D95E6E0533E7279E /* AntipodesInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AntipodesInteractorTests.swift; sourceTree = "<group>"; };
 		C6CA66D4C44E02ED76F9B468 /* AntipodesRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AntipodesRouter.swift; sourceTree = "<group>"; };
+		CD57FF262DD0502900E37313 /* InfoTestCase1.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoTestCase1.plist; sourceTree = "<group>"; };
 		CD66F3352DCF57040046336D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD66F3362DCF57040046336D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD66F3372DCF57040046336D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD66F3382DCF57040046336D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD66F33A2DCF57040046336D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CD66F33B2DCF57040046336D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD66F3432DCF57060046336D /* RefactorTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactorTestTests.swift; sourceTree = "<group>"; };
 		CD66F3462DCF57090046336D /* RefactorTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactorTestUITests.swift; sourceTree = "<group>"; };
 		CD66F3472DCF57090046336D /* RefactorTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactorTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CD66F34C2DCF57D20046336D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		CD66F34E2DCF57F80046336D /* W3WService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = W3WService.swift; sourceTree = "<group>"; };
+		CD7769262DD0539000DA5B18 /* BundleExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensionTest.swift; sourceTree = "<group>"; };
+		CD7769282DD053E100DA5B18 /* legacy-error.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "legacy-error.json"; sourceTree = "<group>"; };
 		CD93B5882DCF5F8A006002F1 /* ApplicationServiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationServiceBuilder.swift; sourceTree = "<group>"; };
 		CD93B58B2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extension.swift"; sourceTree = "<group>"; };
 		CD93B5A42DCF73C9006002F1 /* ConfigurationManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManagerTest.swift; sourceTree = "<group>"; };
+		CD93B5AA2DCF79CD006002F1 /* W3WServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = W3WServiceMock.swift; sourceTree = "<group>"; };
+		CD93B5AD2DCF7CCB006002F1 /* w3w-square-response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "w3w-square-response.json"; sourceTree = "<group>"; };
+		CD93B5B22DCF8012006002F1 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		CD93B5BA2DCFB3ED006002F1 /* w3w-square-response-no-words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "w3w-square-response-no-words.json"; sourceTree = "<group>"; };
 		D080396B6073402443724367 /* AntipodesViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = AntipodesViewController.xib; sourceTree = "<group>"; };
 		DBDFCAC3B5C9735D1977B406 /* AntipodesBuilderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AntipodesBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD93B5B12DCF7F92006002F1 /* SwiftyJSON in Frameworks */,
 				019490FB2DC00672003793F1 /* W3WSwiftApi in Frameworks */,
 				CD66F3522DCF58F10046336D /* Swinject in Frameworks */,
 			);
@@ -227,7 +241,6 @@
 				CD66F3372DCF57040046336D /* Info.plist */,
 				CD66F3392DCF57040046336D /* LaunchScreen.storyboard */,
 				CD66F33A2DCF57040046336D /* SceneDelegate.swift */,
-				CD66F33B2DCF57040046336D /* ViewController.swift */,
 				2BF78AE2C8798A76AA1CF6DE /* Modules */,
 			);
 			path = RefactorTest;
@@ -236,6 +249,8 @@
 		CD66F3442DCF57060046336D /* RefactorTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				CD7769252DD0538000DA5B18 /* Helper */,
+				CD93B5A92DCF79BA006002F1 /* Mock */,
 				CD93B5A32DCF73B1006002F1 /* Configuration */,
 				CD66F3432DCF57060046336D /* RefactorTestTests.swift */,
 				B1EEC1A68FC8D0EEDDDA1181 /* Modules */,
@@ -267,6 +282,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD7769252DD0538000DA5B18 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CD7769262DD0539000DA5B18 /* BundleExtensionTest.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		CD93B5872DCF5F84006002F1 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				CD93B58B2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift */,
+				CD93B5B22DCF8012006002F1 /* Bundle.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -290,6 +314,26 @@
 				CD93B5A42DCF73C9006002F1 /* ConfigurationManagerTest.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		CD93B5A92DCF79BA006002F1 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				CD93B5AC2DCF7C37006002F1 /* Stubs */,
+				CD93B5AA2DCF79CD006002F1 /* W3WServiceMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		CD93B5AC2DCF7C37006002F1 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				CD57FF262DD0502900E37313 /* InfoTestCase1.plist */,
+				CD93B5AD2DCF7CCB006002F1 /* w3w-square-response.json */,
+				CD93B5BA2DCFB3ED006002F1 /* w3w-square-response-no-words.json */,
+				CD7769282DD053E100DA5B18 /* legacy-error.json */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		D5D14E34E81DFF76E3B46902 /* View */ = {
@@ -339,6 +383,7 @@
 			packageProductDependencies = (
 				019490FA2DC00672003793F1 /* W3WSwiftApi */,
 				CD66F3512DCF58F10046336D /* Swinject */,
+				CD93B5B02DCF7F92006002F1 /* SwiftyJSON */,
 			);
 			productName = RefactorTest;
 			productReference = 01823E102DBFFCC90052717B /* RefactorTest.app */;
@@ -415,6 +460,7 @@
 			packageReferences = (
 				019490F92DC00672003793F1 /* XCRemoteSwiftPackageReference "w3w-swift-wrapper" */,
 				CD66F3342DCF56900046336D /* XCRemoteSwiftPackageReference "Swinject" */,
+				CD93B5AF2DCF7F92006002F1 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 01823E112DBFFCC90052717B /* Products */;
 			projectDirPath = "";
@@ -442,6 +488,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7769292DD053E100DA5B18 /* legacy-error.json in Resources */,
+				CD57FF272DD0502900E37313 /* InfoTestCase1.plist in Resources */,
+				CD93B5AE2DCF7CCB006002F1 /* w3w-square-response.json in Resources */,
+				CD93B5BB2DCFB3ED006002F1 /* w3w-square-response-no-words.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,8 +510,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD66F33D2DCF57040046336D /* AppDelegate.swift in Sources */,
+				CD93B5B32DCF8012006002F1 /* Bundle.swift in Sources */,
 				CD66F33E2DCF57040046336D /* SceneDelegate.swift in Sources */,
-				CD66F33F2DCF57040046336D /* ViewController.swift in Sources */,
 				CD66F34D2DCF57D20046336D /* Configuration.swift in Sources */,
 				A3801F76C43E566C3D6827AE /* AntipodesViewController.swift in Sources */,
 				CD93B58C2DCF63DD006002F1 /* CLLocationCoordinate2D+Extension.swift in Sources */,
@@ -480,7 +530,9 @@
 			files = (
 				CD66F3452DCF57060046336D /* RefactorTestTests.swift in Sources */,
 				BA49EA92ADC3F29873261F52 /* AntipodesBuilderTests.swift in Sources */,
+				CD93B5AB2DCF79CD006002F1 /* W3WServiceMock.swift in Sources */,
 				0CF4B615B67374370DF4DBEF /* AntipodesViewTests.swift in Sources */,
+				CD7769272DD0539000DA5B18 /* BundleExtensionTest.swift in Sources */,
 				DD2181BEF943A7559AE5035B /* AntipodesInteractorTests.swift in Sources */,
 				CD93B5A52DCF73C9006002F1 /* ConfigurationManagerTest.swift in Sources */,
 				5340E8DC2EABA698DA480C24 /* AntipodesPresenterTests.swift in Sources */,
@@ -834,6 +886,14 @@
 				minimumVersion = 2.9.1;
 			};
 		};
+		CD93B5AF2DCF7F92006002F1 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -846,6 +906,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD66F3342DCF56900046336D /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		CD93B5B02DCF7F92006002F1 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD93B5AF2DCF7F92006002F1 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

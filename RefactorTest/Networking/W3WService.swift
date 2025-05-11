@@ -21,6 +21,11 @@ class W3WServiceDefault: W3WService {
         api = What3WordsV4(apiKey: configuration.getW3WApiKey())
     }
     
+//    init(api: What3WordsV4, configuration: ConfigurationManager = ConfigurationManager()) {
+//        self.api = api
+//        self.configuration = configuration
+//    }
+    
     func convertTo3wa(coordinate: CLLocationCoordinate2D, completion: @escaping W3WSquareResponse) {
         api.convertTo3wa(coordinates: coordinate, language: W3WBaseLanguage(code: "en"), completion: completion)
     }
